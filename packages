@@ -1,0 +1,98 @@
+## Archive Tools
+zip
+unzip
+#unrar
+p7zip
+#arj
+xz
+lzop
+
+# File manager
+spacefm
+
+# Text editor
+leafpad
+nano 
+
+# Sound
+#alsa-firmware
+alsa-utils
+#alsa-oss
+
+# Window Manager Stuff
+openbox
+#openbox-themes
+#laptop-detect
+xdg-user-dirs
+tint2
+dmenu
+
+i3
+
+# Xorg Extras
+fontconfig
+#virtualbox-guest-utils
+kbd
+
+# Extra Apps
+slock
+feh
+#at
+openssh
+#pkgfile
+#clonezilla
+ncdu
+tmux
+lxterminal
+#arch-install-scripts
+wget
+firefox
+#gstreamer0.10-base-plugins
+#gstreamer0.10-good
+scrot
+lxde-icon-theme
+
+# Media
+#deadbeef
+#libmad
+
+obconf
+lxappearance
+lxinput
+lxrandr
+obmenu-generator
+
+# Network Tools
+tcl
+#usb_modeswitch
+wpa_supplicant
+libsecret
+polkit
+rfkill
+
+# Develop Tools
+dialog
+sudo
+squashfs-tools
+ntfs-3g
+#dnsutils
+rsync
+dosfstools
+htop 
+#haveged
+parted
+gptfdisk
+ddrescue
+dmraid
+
+# Intel microcode
+intel-ucode
+
+# Bootloader
+grub
+os-prober
+#lsb-release
+syslinux
+
+xorg
+lxdm
