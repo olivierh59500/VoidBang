@@ -12,7 +12,3 @@ alias ls='ls --color=auto'
 
 alias state='sudo sv status /var/service/*'
 
-sudo ln -s /etc/sv/alsa /var/service || true &> /dev/null
-sudo ln -s /etc/sv/dbus /var/service || true &> /dev/null
-sudo ln -s /etc/sv/dhcpcd /var/service || true &> /dev/null
-

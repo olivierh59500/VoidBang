@@ -348,7 +348,8 @@ cp -a /home/mrgreen/voidbang/virootfs/* "$ROOTFS"
 # change owner of virootfs files
 find $ROOTFS -user mrgreen -exec chown root:root {} \;
 # start services we need
-#xbps-uchroot $ROOTFS ln -s /etc/sv/dbus /var/service || true
+xbps-uchroot $ROOTFS /bin/bash /root/customroot
+
 
 export PATH=$VOIDHOSTDIR/usr/bin:$VOIDHOSTDIR/usr/sbin:$PATH
 export LD_LIBRARY_PATH=$VOIDHOSTDIR/usr/lib
