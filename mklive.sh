@@ -343,12 +343,17 @@ mkdir -p "$ROOTFS"/etc
 info_msg "[3/9] Installing void pkgs into the rootfs: ${PACKAGE_LIST} ..."
 install_packages
 
+#
+# VoidBang magic starts here
+#
 # copy overlay here to $ROOTFS need script path and change owner
 cp -a /home/mrgreen/voidbang/virootfs/* "$ROOTFS"
 # change owner of virootfs files
 find $ROOTFS -user mrgreen -exec chown root:root {} \;
-# start services we need
+# run customroot script to start services live...
 xbps-uchroot $ROOTFS /bin/bash /root/customroot
+# remove once complete
+rm $ROOTFS/root/customroot
 
 
 export PATH=$VOIDHOSTDIR/usr/bin:$VOIDHOSTDIR/usr/sbin:$PATH

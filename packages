@@ -27,7 +27,7 @@ xdg-user-dirs
 tint2
 dmenu
 
-i3
+#i3
 
 # Xorg Extras
 fontconfig

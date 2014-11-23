@@ -9,6 +9,6 @@
 #xbacklight -set 100 &
 #/usr/bin/synclient TouchpadOff=1 &
 #xxkb &
-setxkbmap gb &
+#setxkbmap gb &
 
 (sleep 2 && spacefm -d) &
