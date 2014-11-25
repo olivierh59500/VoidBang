@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#ln -s /etc/sv/sshd /etc/runit/runsvdir/default || true
 ln -s /etc/sv/lxdm /etc/runit/runsvdir/default || true
+ln -s /etc/sv/dbus /etc/runit/runsvdir/default || true
 ln -s /etc/sv/alsa /etc/runit/runsvdir/default || true
 ln -s /etc/sv/dhcpcd /etc/runit/runsvdir/default || true
-ln -s /etc/sv/dbus /etc/runit/runsvdir/default || true 

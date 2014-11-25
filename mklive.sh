@@ -347,8 +347,8 @@ install_packages
 # VoidBang magic starts here
 #
 # copy overlay here to $ROOTFS need script path and change owner
-cp -a /home/mrgreen/voidbang/virootfs/* "$ROOTFS"
-# change owner of virootfs files
+cp -a /home/mrgreen/voidbang/overlay/* "$ROOTFS"
+# change owner of overlay files
 find $ROOTFS -user mrgreen -exec chown root:root {} \;
 # run customroot script to start services live...
 xbps-uchroot $ROOTFS /bin/bash /root/customroot

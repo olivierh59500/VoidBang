@@ -4,7 +4,6 @@ Super+e Editor
 Super+w Web Browser
 Super+q Force Quit
 Super+g Character Map
-Super+r Read the DOC
 Super+a Toggle Maximize
 Super+h Toggle Horizontal
 Super+v Toggle Vertical
