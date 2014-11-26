@@ -3,7 +3,6 @@ Super+f File Manager
 Super+e Editor
 Super+w Web Browser
 Super+q Force Quit
-Super+g Character Map
 Super+a Toggle Maximize
 Super+h Toggle Horizontal
 Super+v Toggle Vertical
