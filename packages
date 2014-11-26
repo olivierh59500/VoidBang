@@ -96,4 +96,4 @@ os-prober
 syslinux
 
 xorg
-lxdm
+#lxdm
