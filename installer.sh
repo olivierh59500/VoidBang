@@ -947,6 +947,10 @@ menu_source() {
     set_option SOURCE $src
 }
 
+menu_username() {
+	# xbps-uchroot /bin/bash /usr/bin/mvuser
+}
+
 menu() {
     if [ -z "$DEFITEM" ]; then
         DEFITEM="Keyboard"
@@ -967,6 +971,7 @@ menu() {
         "Partition" "Partition disk(s)" \
         "Filesystems" "Configure filesystems and mount points" \
         "Install" "Start installation with saved settings" \
+		"Username" "Change username and config files to suit" \ 
         "Exit" "Exit installation"
 
     if [ $? -eq 3 ]; then
@@ -989,6 +994,7 @@ menu() {
         "BootLoader") menu_bootloader && [ -n "$BOOTLOADER_DONE" ] && DEFITEM="Partition";;
         "Partition") menu_partitions && [ -n "$PARTITIONS_DONE" ] && DEFITEM="Filesystems";;
         "Filesystems") menu_filesystems && [ -n "$FILESYSTEMS_DONE" ] && DEFITEM="Install";;
+#		"Username") menu_username && [ -n "$USERNAME_DONE" ] && DEFITEM="Filesystems";;
         "Install") menu_install;;
         "Exit") DIE;;
         *) DIALOG --yesno "Abort Installation?" ${YESNOSIZE} && DIE
