@@ -949,7 +949,8 @@ menu_source() {
 }
 
 menu_username() {
-	 xbps-uchroot /bin/bash /usr/bin/mvuser
+	 chroot /usr/bin/mvuser
+	 USERNAME_DONE=1
 }
 
 menu() {
@@ -971,8 +972,8 @@ menu() {
         "BootLoader" "Set disk to install bootloader" \
         "Partition" "Partition disk(s)" \
         "Filesystems" "Configure filesystems and mount points" \
-        "Install" "Start installation with saved settings" \
 		"Username" "Change username and config files to suit" \ 
+        "Install" "Start installation with saved settings" \
         "Exit" "Exit installation"
 
     if [ $? -eq 3 ]; then
@@ -994,8 +995,8 @@ menu() {
         "RootPassword") menu_rootpassword && [ -n "$ROOTPASSWORD_DONE" ] && DEFITEM="BootLoader";;
         "BootLoader") menu_bootloader && [ -n "$BOOTLOADER_DONE" ] && DEFITEM="Partition";;
         "Partition") menu_partitions && [ -n "$PARTITIONS_DONE" ] && DEFITEM="Filesystems";;
-        "Filesystems") menu_filesystems && [ -n "$FILESYSTEMS_DONE" ] && DEFITEM="Install";;
-		"Username") menu_username && [ -n "$USERNAME_DONE" ] && DEFITEM="Filesystems";;
+        "Filesystems") menu_filesystems && [ -n "$FILESYSTEMS_DONE" ] && DEFITEM="Username";;
+		"Username") menu_username && [ -n "$USERNAME_DONE" ] && DEFITEM="Install";;
         "Install") menu_install;;
         "Exit") DIE;;
         *) DIALOG --yesno "Abort Installation?" ${YESNOSIZE} && DIE
