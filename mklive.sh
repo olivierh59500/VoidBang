@@ -113,9 +113,9 @@ install_packages() {
     fi
 
     if [ -x installer.sh ]; then
-        install -Dm755 installer.sh $ROOTFS/usr/sbin/void-installer
+        install -Dm755 installer.sh $ROOTFS/usr/sbin/voidbang-installer
     else
-        install -Dm755 /usr/sbin/void-installer $ROOTFS/usr/sbin/void-installer
+        install -Dm755 /usr/sbin/void-installer $ROOTFS/usr/sbin/voidbang-installer
     fi
     # Cleanup and remove useless stuff.
     rm -rf $ROOTFS/var/cache/* $ROOTFS/run/* $ROOTFS/var/run/*

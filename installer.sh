@@ -948,7 +948,7 @@ menu_source() {
 }
 
 menu_username() {
-	# xbps-uchroot /bin/bash /usr/bin/mvuser
+	 xbps-uchroot /bin/bash /usr/bin/mvuser
 }
 
 menu() {
@@ -994,7 +994,7 @@ menu() {
         "BootLoader") menu_bootloader && [ -n "$BOOTLOADER_DONE" ] && DEFITEM="Partition";;
         "Partition") menu_partitions && [ -n "$PARTITIONS_DONE" ] && DEFITEM="Filesystems";;
         "Filesystems") menu_filesystems && [ -n "$FILESYSTEMS_DONE" ] && DEFITEM="Install";;
-#		"Username") menu_username && [ -n "$USERNAME_DONE" ] && DEFITEM="Filesystems";;
+		"Username") menu_username && [ -n "$USERNAME_DONE" ] && DEFITEM="Filesystems";;
         "Install") menu_install;;
         "Exit") DIE;;
         *) DIALOG --yesno "Abort Installation?" ${YESNOSIZE} && DIE
